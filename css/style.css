@@ -749,7 +749,7 @@ margin:0 auto;
     text-transform: uppercase;
     font-weight: 700;
     display: flex;
-    gap: 280px;
+    gap:380px;
     margin: 70px auto 30px;
     width: var(--width-12col);
     font-size: 50px;
@@ -780,7 +780,7 @@ margin:0 auto;
 }
 
 .content_up_text ul{
-    grid-column: 8/span 4;
+    grid-column: 9/span 4;
     padding-left: 15px;
 }
 .content_down{
@@ -799,7 +799,7 @@ margin:0 auto;
     text-transform: uppercase;
     font-weight: 700;
     display: flex;
-    gap: 300px;
+    gap: 380px;
     margin: 70px auto 30px;
     width: var(--width-12col);
     font-size: 50px;
@@ -831,11 +831,12 @@ margin:0 auto;
     transform: rotate(-90deg); margin-right: 10px; white-space: nowrap;
     text-transform: uppercase;
     color: var(--primary-color);
+    margin-left: -15px;
 }
 
 .content_down_text ul{
-    grid-column: 8/span 4;
-    padding-left: 15px;
+    grid-column: 9/span 4;
+    margin-left: -5px;
 }
 
 .content_down_text ul li{
