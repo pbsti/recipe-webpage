@@ -1,0 +1,850 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+/*Dimensions*/
+--width-full:100%;
+--width-12col:1200px;
+
+/*Grid Settings*/
+--grid-gap: 10px;
+--padding-default: 20px;
+
+/*Colors*/
+--backround-color-navigation: #00000088;
+--backround-color-light: #ededed;
+--backround-color-dark-bg: #111111;
+--primary-color: #bf5b23;
+--color-white: #ffffff;
+--color_dark: #373737;
+--color-light: #ebebeb;
+
+/*color swatch category*/
+--category-seafood: #3E30E2;
+--category-chicken: #249C8E;
+--category-meats: #D09189;
+--category-veg: #298F3F;
+--category-dessert: #9374EB;
+--category-misc: #9A951E;
+--category-pasta: #BF5B23;
+}
+
+/*reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**Global Styles*/
+.category-seafood{
+    color: var(--category-seafood);
+}
+.category-chicken{
+    color: var(--category-chicken);
+}
+.category-meats{
+    color: var(--category-meats);
+}
+.category-veg{
+    color: var(--category-veg);
+}
+.category-dessert{
+    color: var(--category-dessert);
+}
+.category-misc{
+    color: var(--category-misc);
+}
+.category-pasta{
+    color: var(--category-pasta);
+}
+
+body{
+    background-color:var(--backround-color-dark-bg);
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(89,89,89,1) 100%);
+    width: var(--width-full);
+    height: auto;
+
+}
+.navigation{
+background-color:var(--backround-color-navigation);
+position: relative;
+z-index: 1000; /*this will give the transparecy*/
+}
+
+.menu-container{
+width:var(--width-12col);
+margin:0 auto;
+}
+
+.menu-container ul {
+    display: flex;
+}
+
+.menu-container ul li {
+    list-style-type: none;
+    margin:10px 0 10px 0; /* it starts with the margin from top, right, bottom, left*/
+  }
+  .menu-container ul li a{  /*this is how we go exactly to the home button, by writting every box*/
+    color: var(--backround-color-light);
+    text-decoration: none; /*this removed the underline from the words written in the navigation bar*/
+    text-transform: uppercase;
+    border-right: 1px solid var(--backround-color-light); /*when we have a border we need to write width, type and the color last*/
+    padding-right: 10px;
+    padding: 0 10px 0 10px;
+  }
+
+  .menu-container ul li a:hover {  
+    color: var(--primary-color);
+   }
+
+   .menu-container ul li:last-child a {  /*if you were to attach ''last child'' to a, it wold not work because it doesn't recognise cause it is not a list, there is only one a, while li- there are 3 of those*/
+    border-right: none;
+   }
+
+  .hero{
+    background-image: url('https://picsum.photos/1920/800');
+    width: var(--width-full);
+    height: auto;
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: -40px;
+    color: var(--backround-color-light);
+
+  }
+    .hero-container{
+        display:grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto auto;
+        width: var(--width-12col);
+        gap: var(--grid-gap);
+        margin: 0 auto;
+    }
+
+    .hero-text{
+        grid-column: 1/span 4;
+        margin-top: 200px;
+        grid-row: 1;
+    }
+    .hero-search{
+        grid-column: 2/span 3;
+        margin-top: 60px;
+        grid-row: 2;
+    } 
+
+    .search-input{
+        background-color: transparent; /*this will not work in Safari- need to add -webkit-appearance: none;*/
+        outline: none;
+        border: 1px solid var(--backround-color-light);
+        border-radius: 5px;
+        padding: 10px 20px 10px 40px;
+        color: var(--backround-color-light);
+    }
+
+    .search-input::placeholder{
+        color: var(--backround-color-light);
+    }
+    
+    .hero-text-smallest{
+        font-size: 12px;
+    }
+    .hero-text-medium{
+        font-size: 32px;
+        text-transform: uppercase;
+        margin-top: 15px;
+    }
+    .hero-text-large{
+        font-size: 37px;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+    .todays_recipes{
+        height: fit-content;
+        width: var(--width-full);
+        display: grid;
+        grid-template-columns: 1 fr;
+        grid-template-rows: 130px auto;
+        gap: var(--grid-gap);
+    }
+
+    .todays_recipes_content_block_image img {
+        height:200px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px 5px 0 0; /* you can also do border-top-left-radius: ; */
+        }
+        /*.todays_recipes_content_block_image{
+            clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+        } */
+
+    .todays_recipes_headline {
+        color: var(--color-white);
+        height: 60px;
+        border-bottom: 1px solid var(--color-white);
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-self: flex-start;
+        margin: 70px auto;
+        width: var(--width-12col);
+        font-size: 50px;
+        text-shadow: 1px 1px 3px var(--backround-color-dark-bg);
+    }
+
+    .todays_recipes_content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--grid-gap);
+        box-sizing: border-box;
+        width: var(--width-12col);
+        margin:0 auto;
+    }
+    .todays_recipes_content_block{
+        background-color: var(--backround-color-light);
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px var(--backround-color-dark-bg);
+    }
+    .todays_recipes_content_block_text{
+        padding:20px;
+        color: var(--color_dark);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .todays_recipes_content_block_text h4{
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .todays_recipes_content_block_text p{
+        font-size: 16px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .todays_recipes_content_block_bottom_area{
+        display: flex; /*this makes the things inside go on the horizontal line compared to display grid*/
+        justify-content: space-between;
+        margin: 20px 0 0 0;
+    }
+    .todays_recipes_content_block_bottom_area_left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 0 0 10px;
+        border-left: 1px solid var(--category-seafood);
+        text-transform: uppercase;
+    }
+    
+    div[data-category="seafood"] {
+        border-left: 1px solid var(--category-seafood);
+    }
+    p[data-category="seafood"]{
+        color: var(--category-seafood)
+    }
+    #cat-test::after{
+        content:attr(data-category)
+    }
+    div[data-category="chicken"] {
+        border-left: 1px solid var(--category-chicken);
+    }
+    p[data-category="chicken"]{
+        color: var(--category-chicken)
+    }
+    #cat-test::after{
+        content:attr(data-category)
+    }
+    p[data-category="dessert"] {
+        color: var(--category-dessert)
+        }
+    div[data-category="dessert"] {
+        border-left: 1px solid var(--category-dessert);
+    }
+    #cat-test::after{
+        content:attr(data-category)
+    }
+    div[data-category="meats"] {
+        border-left: 1px solid var(--category-meats);
+    }
+    p[data-category="meats"]{
+        color: var(--category-meats)
+    }
+    #cat-test::after{
+        content:attr(data-category)
+    }
+        /* .category-color{
+        color: var(--category-seafood);
+    } */
+
+    .todays_recipes_content_block_bottom_area_right button{
+        background-color: var(--color_dark);
+        border: 1 px, solid var(--backround-color-light);
+        padding: 8px 16px;
+        border-radius: 5px;
+        font-size: 12 px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .todays_recipes_content_block_bottom_area_right button a{
+        color: var(--backround-color-light);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
+
+    }
+    .categories{
+        height: fit-content;
+        width: var(--width-full);
+        display: grid;
+        grid-template-columns: 1 fr;
+        gap: var(--grid-gap);
+    }
+
+    .categories_headline {
+        color: var(--color-white);
+        height: 60px;
+        border-bottom: 1px solid var(--color-white);
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-self: flex-start;
+        margin: 28px auto;
+        width: var(--width-12col);
+        font-size: 50px;
+        text-shadow: 1px 1px 3px var(--backround-color-dark-bg);
+    }
+
+    .categories_content{
+        width:var(--width-12col);
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--backround-color-light);
+        border-radius:5px;
+        padding:5px;
+        margin: 0 auto;
+        gap: var(--grid-gap);
+    }
+    .categories_content_block{
+        box-sizing: border-box;
+        justify-content: center;
+    }
+    .categories_content_block_text{
+        color: var(--color_dark);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex: 1;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .categories_content_block_icon{
+        display: flex;
+        justify-content: center;
+    }
+    #vegetarian-icon{
+        color:var(--category-veg);
+        font-size: 40px;
+    }
+    #seafood-icon{
+        color:var(--category-seafood);
+        font-size: 40px;
+    }
+    #pastas-icon{
+        color: var(--category-pasta);
+        font-size: 40px;
+    }
+    #chicken-icon{
+        color: var(--category-chicken);
+        font-size: 40px;
+    }
+    #snacks-icon{
+        color: var(--category-misc);
+        font-size: 40px;
+    }
+    #meat-icon{
+        color: var(--category-meats);
+        font-size: 40px;
+    }
+    #dessert-icon{
+        color: var(--category-dessert);
+        font-size: 40px;
+    }
+
+    [data-category="vegetarian"]{
+        color: var(--category-veg)
+    }
+    [data-category="seafood"]{
+        color: var(--category-seafood)
+    }
+    [data-category="pastas"]{
+        color: var(--category-pasta)
+    }
+    [data-category="chicken"]{
+        color: var(--category-chicken)
+    }
+    [data-category="snacks"]{
+        color: var(--category-misc)
+    }
+    [data-category="meat"]{
+        color: var(--category-meats)
+    }
+    [data-category="dessert"]{
+        color: var(--category-dessert)
+    }
+
+    .content_image{
+        height: 600px;
+        width: 100%;
+        background: url("https://picsum.photos/300/175");
+        background-repeat: no-repeat;
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 25%, 100% 100%, 0% 100%);
+    }
+
+    .content_container{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto auto;
+        width: var(--width-12col);
+        gap: var(--grid-gap);
+        margin: 0 auto;
+    }
+
+    .content_image_text_box{
+        background-color: var(--backround-color-light);
+        border-radius: 5px;
+        padding: 2rem;
+        margin-top: 200px;
+        grid-column: 9 / span 4;
+    }
+    .kitchen_area{
+        height: fit-content;
+        width: var(--width-full);
+        display: grid;
+        grid-template-columns: 1 fr;
+        grid-template-rows: 130px auto;
+        gap: var(--grid-gap); 
+    }
+
+    .kitchen_area_headline {
+        color: var(--color-white);
+        height: 60px;
+        border-bottom: 1px solid var(--color-white);
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-self: flex-start;
+        margin: 28px auto;
+        width: var(--width-12col);
+        font-size: 50px;
+        text-shadow: 1px 1px 3px var(--backround-color-dark-bg);
+    }
+    .kitchen_area_content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:repeat(3,380px);
+        box-sizing: border-box;
+        width: var(--width-12col);
+        margin: 0 auto;
+    }
+    
+    .kitchen_area_content_block{
+        background-color: var(--backround-color-light);
+        color: var(--color_dark);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 79px 186px 174px 93px;
+    }
+    
+    #img-kitchen{
+        background: url("https://picsum.photos/300/175");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .kitchen_area_content_block h6{
+        padding: 0 0 0 12px;
+        border-left: 2px solid var(--primary-color);
+    }
+    .kitchen_area_content_block h4{
+        padding: 12px 0 12px 0; 
+        color: #FF5C00;
+        text-transform: uppercase;
+    }
+    .kitchen_area_content_block p{
+        padding: 0 0 45px 0;
+    }
+    footer{
+        margin:241px 0 0 0;
+        padding:32px 0 37px 20px ;
+        background-color: var(--primary-color);
+        color: var(--color_dark);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .footer_left{
+        display: flex;
+        flex-direction: row;
+        border-right:1px solid var(--color-white);
+        width:50%;
+    }
+    .footer_left_some a{
+        padding: 0 192px 0 10px;
+        font-size: 13px;
+        color: var(--backround-color-light);
+        text-decoration: none;
+
+    } 
+   .footer_left_some ul li{
+        list-style-type: none;
+        padding: 3px;
+        color: var(--backround-color-light);
+    }
+    .footer_left_text a{
+        font-size: 13px;
+        color: var(--backround-color-light);
+        text-decoration: none;
+    }
+    .footer_left_text ul li {
+        list-style-type: none;
+        padding: 3px;
+    }
+    .footer_right{
+        display: flex;
+        flex-direction:column;
+        justify-content: flex-end;
+        text-align:right;
+        width:50%;
+        padding-right: 50px;
+    }
+    .footer_right a{
+        color: var(--backround-color-light);
+        text-decoration: none;
+    }
+    .footer_right p1{
+        padding: 35px 80px 0 0;
+    }
+
+    
+
+/* Recipe_page */
+.color-primary {
+    color:var(--primary-color);
+  }
+  
+  .recipe_details {
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap:var(--grid-gap);
+    width:var(--width-12col);
+    margin: 0 auto;
+    padding:100px 0 0 0;
+  }
+  
+  .recipe_details_left {
+    grid-column: 1 / span 6;
+  }
+  
+  
+  .recipe-hero-container {/* child to follow to 12 column */
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    width:var(--width-12col);
+    gap:var(--grid-gap);
+    margin: 0 auto;
+  } 
+  
+  .recipe-hero-text {
+    grid-column: 1 / span 4;
+    margin-top:0px;
+    grid-row: 1;
+    color: var(--backround-color-light);
+  }
+  
+  .recipe-hero-text-smallest {
+    font-size: 12px;
+  }
+  
+  .recipe-hero-text-medium {
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-top:15px;
+  }
+  
+  .recipe-hero-text-large {
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-top:5px;
+    margin-bottom:15px
+  }
+  
+  
+  /* START HERE */
+  /* PART I - Three icon+info */
+
+  .recipe_details_ingredient_block_info_three {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: var(--grid-gap);
+    margin: 30px 0 0 0;
+    color: var(--backround-color-light);
+  }
+  .recipe_details_ingredient_block_info_three_item{
+    display: flex;
+    padding: 10px 0;
+
+  }
+  .recipe_details_ingredient_block_info_three_item i{
+    color: var(--primary-color);
+    padding: 0 10px 0 0;
+        
+  }
+  
+  /* Part I End */
+  
+  /* PART II - input field ingredients start */
+  .recipe_details_ingredients{
+    margin: 0 0 30px 0;
+    color: var(--backround-color-light);
+    padding: 20px 20px 5px 20px;
+    background: rgb(217,217,217);
+    background: linear-gradient(90deg, rgba(217,217,217,0.23) 0%, rgba(217,217,217,0.24) 63%, rgba(217,217,217,0) 100%);
+  }
+  .recipe_details_ingredients h4{
+    font-size: 24px;
+    margin: 0 0 20px 0;
+  }
+  .recipe_details_ingredient_block_checkboxes{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 20px 0;
+    
+  }
+  .recipe_details_ingredients label{
+    width:40%;
+    display:flex;
+    margin: 10px 10px 10px 0;
+    font-size: 16px;
+    align-items: center;
+  }
+  .recipe_details_ingredients input[type="checkbox"] {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid var(--backround-color-light);
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  .recipe_details_ingredients input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    border: none;
+    
+  }
+  .recipe_details_ingredients input[type="checkbox"]:checked::after{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 10px;
+    border:solid var(--backround-color-light);
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+  }
+  /* input field ingredients end - PART II end */
+  
+  
+  
+  /* PART III - buttons after input fields */
+  .recipe_details_ingredient_block_buttons{
+    display: flex;
+    margin:30px 0 0 0;
+  }
+  .recipe_details_ingredient_block_buttons button{
+    background-color: transparent;
+    border: 1px solid var(--backround-color-light);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 0 10px 0 0;
+  }
+  .recipe_details_ingredient_block_buttons button a{
+    color: var(--backround-color-light);
+    text-decoration: none;
+  }
+
+  .recipe_details_ingredient_block_buttons button i{
+    color: var(--backround-color-light);
+    padding: 0 5px 0 0;
+  }
+  
+  /* PART III END */
+  
+  
+  
+  /* Right side top */
+  .recipe_details_right {
+    grid-column: 7 / span 6;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .recipe_details_right_image {
+   
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  } 
+  
+  .recipe_details_right_image img {
+    width:100%;
+    height: 100%;
+    max-width: fit-content;
+    max-height: 500px;
+  
+  }
+  
+
+/* First content block(above) */
+.content_up{
+    display: grid;
+    grid-template-columns: 1 fr;
+    grid-template-rows: 130px auto;
+    height: fit-content;
+    width: var(--width-full);
+    gap: var(--grid-gap);
+    }
+
+.content_up_headline {
+    color: var(--color-white);
+    height: 60px;
+    border-bottom: 1px solid var(--color-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    gap: 280px;
+    margin: 70px auto 30px;
+    width: var(--width-12col);
+    font-size: 50px;
+    text-shadow: 1px 1px 3px var(--backround-color-dark-bg);
+}
+
+.content_up_text{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap:var(--grid-gap);
+    width:var(--width-12col);
+    margin: 30px auto;
+    justify-self: start;
+    color: var(--color-white);
+}
+
+.content_up_text ol{
+    list-style-type: style type 1px;
+    grid-column: 1/span 6;
+    padding-left: 15px;
+}
+
+.content_up_text ol li{
+    padding-bottom: 20px;
+    padding-left: 5px;
+    
+}
+
+.content_up_text ul{
+    grid-column: 8/span 4;
+    padding-left: 15px;
+}
+.content_down{
+    display: grid;
+    grid-template-columns: 1 fr;
+    grid-template-rows: 130px auto;
+    height: fit-content;
+    width: var(--width-full);
+    gap: var(--grid-gap);
+}
+
+.content_down_headline{
+    color: var(--color-white);
+    height: 60px;
+    border-bottom: 1px solid var(--color-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    gap: 300px;
+    margin: 70px auto 30px;
+    width: var(--width-12col);
+    font-size: 50px;
+    text-shadow: 1px 1px 3px var(--backround-color-dark-bg);
+}
+
+.content_down_text{
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap:var(--grid-gap);
+    width:var(--width-12col);
+    margin: 30px auto;
+    justify-self: start;
+    color: var(--color-white);
+}
+
+.content_down_text ol{
+    grid-column: 1/span 6;
+}
+
+.content_down_container {
+    display: flex; 
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.content_down_steps {
+    transform: rotate(-90deg); margin-right: 10px; white-space: nowrap;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+.content_down_text ul{
+    grid-column: 8/span 4;
+    padding-left: 15px;
+}
+
+.content_down_text ul li{
+    list-style-type:none;
+}
+/* filler to fake rest of page */
+  
+.filler_block {
+height: 2000px;
+width: 100%;
+}
+   
