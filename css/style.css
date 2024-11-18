@@ -498,6 +498,21 @@ margin:0 auto;
     .kitchen_area_content_block p{
         padding: 0 0 45px 0;
     }
+    .kitchen_area_content_block_link button{
+        background-color: var(--color_dark);
+        border: 1px, solid var(--backround-color-light);
+        padding: 10px 50px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .kitchen_area_content_block_link button a{
+        color: var(--backround-color-light);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+    }
 
     /*FOOTER AREA*/
     footer{
