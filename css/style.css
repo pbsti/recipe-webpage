@@ -849,3 +849,35 @@ height: 2000px;
 width: 100%;
 }
    
+/* THIRD PAGE- GUIDE */
+.hero-guide{
+    background-image: url('https://picsum.photos/1920/800');
+    width: var(--width-full);
+    height: auto;
+    min-height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin-top: -40px;
+    color: var(--backround-color-light);
+
+  }
+    .hero-guide-container{
+        display:grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto auto;
+        width: var(--width-12col);
+        gap: var(--grid-gap);
+        margin: 0 auto;
+    }
+
+    .hero-guide-text{
+        grid-column: 4/span 6 ;
+        margin-top: 200px;
+        grid-row: 1;
+    }
+    .hero-guide-search{
+        grid-column: 5/span 4;
+        margin-top: 40px;
+        grid-row: 2;
+    } 
