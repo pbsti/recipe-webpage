@@ -1055,6 +1055,7 @@ width: 100%;
     .topic_content_block{
         box-sizing: border-box;
         justify-content: center;
+        background-color: var(--primary-color);
     }
     .topic_content_block_text{
         color: var(--color_dark);
