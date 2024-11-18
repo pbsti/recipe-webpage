@@ -498,6 +498,8 @@ margin:0 auto;
     .kitchen_area_content_block p{
         padding: 0 0 45px 0;
     }
+
+    /*FOOTER AREA*/
     footer{
         margin:241px 0 0 0;
         padding:32px 0 37px 20px ;
@@ -986,7 +988,7 @@ width: 100%;
     }
 
     .guide_content_block_bottom_area{
-        display: flex; /*this makes the things inside go on the horizontal line compared to display grid*/
+        display: flex;
         justify-content: space-between;
         margin: 20px 0 0 0;
     }
@@ -995,9 +997,9 @@ width: 100%;
         flex-direction: column;
         justify-content: space-between;
         padding: 0 0 0 10px;
-        border-left: 2px solid var(--color_dark);
+        border-left: 2px solid var(--primary-color);
         text-transform: uppercase;
-        color: var(--color_dark);
+        color: var(--primary-color);
         font-weight: 700;
     }
     .guide_content_block_bottom_area_right button{
@@ -1035,7 +1037,7 @@ width: 100%;
         display: flex;
         align-items: center;
         justify-self: flex-start;
-        margin: 70px auto;
+        margin: 30px auto;
         width: var(--width-12col);
         font-size: 50px;
         text-shadow: 1px 1px 3px var(--backround-color-dark-bg);
@@ -1045,8 +1047,7 @@ width: 100%;
         height: auto;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        background-color: var(--backround-color-light);
+        justify-content: space-between;
         border-radius:5px;
         padding:5px;
         margin: 0 auto;
@@ -1055,14 +1056,79 @@ width: 100%;
     .topic_content_block{
         box-sizing: border-box;
         justify-content: center;
-        background-color: var(--primary-color);
+        background-color: var(--color-light);
+        border-radius: 10px;
+        width: 100%;
     }
     .topic_content_block_text{
-        color: var(--color_dark);
+        color: var(--primary-color);
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         flex: 1;
         text-transform: uppercase;
         text-align: center;
+        padding: 15px 10px;
+    }
+    .topic_content_block_text h6{
+        font-size: 18px;
+    }
+
+    /*image link to recipe area*/
+    .link_image{
+        height: 800px;
+        width: 100%;
+        background: url("https://picsum.photos/300/175");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .link_container{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto auto auto;
+        width: var(--width-12col);
+        gap: var(--grid-gap);
+        margin: 0 auto;
+    }
+
+    .link_image_text{
+        background-color: var(--backround-color-light);
+        border-radius: 5px;
+        padding: 2rem;
+        margin-top: 300px;
+        grid-column: 8 / span 5;
+    }
+
+    .link_image_box_right{
+        width: 100%; 
+        display: flex; 
+        justify-content: flex-end
+    }
+    .link_image_text h6{
+        padding: 0 0 0 12px;
+        border-left: 2px solid var(--primary-color);
+    }
+    .link_image_text h4{
+        padding: 12px 0 12px 0; 
+        color:var(--primary-color);
+        text-transform: uppercase;
+    }
+    .link_image_text p{
+        padding: 0 0 20px 0;
+    }
+    .link_image_box_right button{
+        background-color: var(--color_dark);
+        border: 1px, solid var(--backround-color-light);
+        padding: 10px 16px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .link_image_box_right button a{
+        color: var(--backround-color-light);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
     }
