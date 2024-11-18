@@ -136,6 +136,7 @@ margin:0 auto;
         grid-column: 2/span 3;
         margin-top: 60px;
         grid-row: 2;
+        position: relative;
     } 
 
     .search-input{
@@ -149,6 +150,13 @@ margin:0 auto;
 
     .search-input::placeholder{
         color: var(--backround-color-light);
+    }
+
+    #search-icon{
+        color: var(--backround-color-light);
+        position:absolute;
+        top: 10px;
+        left: 10px;
     }
     
     .hero-text-smallest{
@@ -849,7 +857,9 @@ height: 2000px;
 width: 100%;
 }
    
-/* THIRD PAGE- GUIDE */
+/* THIRD PAGE- GUIDE STYLING */
+
+/* THE HERO IMAGE AND TEXT*/
 .hero-guide{
     background-image: url('https://picsum.photos/1920/800');
     width: var(--width-full);
@@ -878,6 +888,115 @@ width: 100%;
     }
     .hero-guide-search{
         grid-column: 5/span 4;
-        margin-top: 40px;
         grid-row: 2;
-    } 
+        position: relative;
+        margin: auto;  /*this will align the div block to the center */
+    }
+    .search-input{
+        background-color: transparent; /*this will not work in Safari- need to add -webkit-appearance: none;*/
+        outline: none;
+        border: 1px solid var(--backround-color-light);
+        border-radius: 5px;
+        padding: 10px 20px 10px 40px;
+        color: var(--backround-color-light);
+    }
+
+    .search-input::placeholder{
+        color: var(--backround-color-light);
+    }
+    
+    .hero-guide-text-small{
+        font-size: 12px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .hero-guide-text-big{
+        font-size: 37px;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        align-self: center;
+        text-align: center;
+    }
+
+    /* THE LATEST GUIDES AREA*/
+    .guide{
+        height: fit-content;
+        width: var(--width-full);
+        display: grid;
+        grid-template-columns: 1 fr;
+        grid-template-rows: 130px auto;
+        gap: var(--grid-gap);
+    }
+
+    
+
+    .guide_headline {
+        color: var(--color-white);
+        height: 60px;
+        border-bottom: 1px solid var(--color-white);
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-self: flex-start;
+        margin: 70px auto;
+        width: var(--width-12col);
+        font-size: 50px;
+        text-shadow: 1px 1px 3px var(--backround-color-dark-bg);
+    }
+
+    .guide_content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: var(--grid-gap);
+        box-sizing: border-box;
+        width: var(--width-12col);
+        margin:0 auto;
+    }
+    .guide_content_block{
+        background-color: var(--backround-color-light);
+        border-radius: 5px;
+        box-shadow: 1px 1px 2px var(--backround-color-dark-bg);
+    }
+    .guide_content_block_image img {
+        height:200px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5px 5px 0 0;
+        }
+    .guide_content_block_text{
+        padding:20px;
+        color: var(--color_dark);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    }
+
+    .guide_content_block_text h4{
+        text-transform: uppercase;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .guide_content_block_text p{
+        font-size: 16px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    .guide_content_block_bottom_area{
+        display: flex; /*this makes the things inside go on the horizontal line compared to display grid*/
+        justify-content: space-between;
+        margin: 20px 0 0 0;
+    }
+    .guide_content_block_bottom_area_left{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 0 0 10px;
+        border-left: 1px solid var(--category-seafood);
+        text-transform: uppercase;
+    }
