@@ -1147,3 +1147,177 @@ width: 100%;
         text-transform: uppercase;
         font-size: 12px;
     }
+
+    /*RESPONSIVE DESIGN*/
+    /*media q*/
+
+@media (width <768px) {
+    :root {
+        --width-12col: 100%;
+        --padding-default: 0;
+    }
+    .hero-text-medium {
+        font-size: 25px;
+    }
+    .hero-text-large {
+        font-size: 30px;
+    }
+
+    /*TODAYS RECIPE SECTION*/
+    .todays_recipes_headline {
+        font-size: 25px;
+    }
+    .todays_recipes_content {
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto;
+    }
+    .todays_recipes_content_block_text h4{
+        font-size: 16px;
+    }
+    .todays_recipes_content_block_text p {
+        font-size: 14px;
+    }
+    
+    /*CATEGORIES SECTION*/
+        .categories_headline {
+        font-size: 25px;
+    }
+    .categories_content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .categories-icon {
+        font-size: 25px;
+    }
+    .categories_content_block_text h6 {
+        font-size: 12px;
+    }
+    
+    /*CONTENT AREA*/
+    .content_container{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px; 
+    }
+    
+    /*KITCHEN AREA*/   
+    .kitchen_area_headline {
+        font-size: 25px;
+    }
+    .kitchen_area_content {
+        display: flex;
+        flex-direction: column;
+    }
+    .kitchen_area_content_block {
+        margin: 5px;
+        padding: 20px;
+    }
+    #img-kitchen {
+        display: none;
+    }
+
+/*RECIPE DETAILS PAGE*/
+    .recipe_details_right_image {
+        display: none;
+    }
+    .recipe-hero-text-medium {
+        font-size: 25px;
+    }
+    .recipe-hero-text-large {
+        font-size: 30px;
+    }
+    .recipe_details_ingredients h4 {
+        font-size: 20px;
+    }
+    .recipe_details_ingredient_block_checkboxes {
+        font-size: 14px;
+    }
+    .content_up_headline {
+        font-size: 25px;
+        gap: 270px;
+    }
+    .content_up{
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto;
+    }
+    .content_up_text {
+        font-size: 12px;
+    }
+    .content_down_headline {
+        font-size: 25px;
+        gap: 270px;
+    }
+    .content_down{
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto;
+    }
+    .content_down_text {
+        font-size: 12px;
+    }
+    .content_down_container{
+         
+    }
+
+
+
+    .dessert_categories_headline {
+        font-size: 25px;
+    }
+    .dessert_categories_content {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .dessert_categories_content_block {
+        height: auto;
+        width: auto;
+        font-size: 12px;
+        padding: 20px;
+    }
+    .dessert_popular_recipes_headline {
+        font-size: 25px;
+    }
+    .dessert_popular_recipes_content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .play_icon {
+        bottom: 35%;
+    }
+    .newest_recipes_headline {
+        font-size: 25px;
+    }
+    .newest_recipes_block {
+        display: flex;
+        flex-direction: column;
+    }
+    .newest_recipes_box_img {
+        display: none;
+    }
+    .newest_recipes_box {
+        margin: 5px;
+        padding: 20px;
+    }
+    .newest_recipes_box h3 {
+        font-size: 16px;
+    }
+    .newest_recipes_box p {
+        font-size: 14px;
+    }
+    .newsletter {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+    }
+
+
+    .footer_container {
+        gap: 10px;
+    }
+    .footer-text {
+        font-size: 10px;
+    }
+}
